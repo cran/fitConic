@@ -30,7 +30,7 @@ This can be used as a Q&D ellipse fitting algorithm, but is intended only for in
 }
 \references{
 This is a revision of the function EllipseDirectFit in package conicfit by Jose Gama, with minor upgrades. 
- Original MATLAB code by: Nikolai Chernov \url{http://www.mathworks.com/matlabcentral/fileexchange/22684-ellipse-fit-direct-method}
+ Original MATLAB code by: Nikolai Chernov \url{https://www.mathworks.com/matlabcentral/fileexchange/22684-ellipse-fit-direct-method}
 A. W. Fitzgibbon, M. Pilu, R. B. Fisher, "Direct Least Squares Fitting of Ellipses", IEEE Trans. PAMI, Vol. 21, pages 476-480 (1999)
  Halir R, Flusser J (1998) Proceedings of the 6th International Conference in Central Europe on Computer Graphics and Visualization, 
  Numerically stable direct least squares fitting of ellipses (WSCG, Plzen, Czech Republic), pp 125132.

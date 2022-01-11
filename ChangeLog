@@ -1,2 +1,3 @@
 
+* rev 1.2 : Added input argument "weights" to allow weighting dataset. New doWeights function to handle weighting. 
 * rev 1.1 : Fixed several man page errors due to file crash when building first version.  

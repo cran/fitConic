@@ -31,14 +31,22 @@
 #IterMAX <- maximal number of (main) iterations usually 10-20 suffice
 
 #allow parInit = NULL to force a call to a bootstrap. conicType is required
-# in this option.  
-fitConic <- function(X, Y = NULL, parInit=NULL, conicType=c('e','h', 'p'), LambdaIni=1, epsilonP= 1e-6, epsilonF=1e-6, IterMAX=2e4) {
+# in this option. 
+# 
+# weights must be nonnegative integers.  Floats will be rounded and negative values set to zero.
+# 
+fitConic <- function(X, Y = NULL, parInit=NULL, conicType=c('e','h', 'p'), weights = NULL, LambdaIni=1, epsilonP= 1e-6, epsilonF=1e-6, IterMAX=2e4) {
 #This is a highly modified version of fitConicLMA function in package conicfit by Jose Gama
 newxy <- xy.coords(X,Y)
 XY <-cbind(newxy$x,newxy$y)
 # removing NaNs and Infs
 goods <- is.finite(XY[ ,1]) & is.finite(XY[ ,2])
 XY <- XY[goods,]
+# apply weights if desired. 
+if (length(weights)){
+	weights <-weights[goods]
+	XY <- doWeights(XY, weights)
+}
 
 if (is.null(parInit) ) {
 #		message(c('Bootstrapping type ',conicType[1]))

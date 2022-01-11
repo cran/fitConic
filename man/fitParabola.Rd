@@ -44,7 +44,7 @@ fitParabola(x, y = NULL, searchAngle = c(-pi/2, pi/2), ...)
   \item{cost }{ final value of the "cost" parameter used for optimization}
 }
 \references{
-Some of the code is based on \url{http://www.mathworks.com/matlabcentral/answers/80541}
+Some of the code is based on \url{https://www.mathworks.com/matlabcentral/answers/80541}
 %% ~put references to the literature/web site here ~
 }
 \author{

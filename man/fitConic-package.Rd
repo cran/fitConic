@@ -20,10 +20,10 @@ The main function is \code{fitConic} .
 Maintainer: \packageMaintainer{fitConic}
 }
 \references{
-\url{http://www.mathworks.com/matlabcentral/answers/80541} for the RANSAC-style search to fit rotated parabolas. 
+\url{https://www.mathworks.com/matlabcentral/answers/80541} for the RANSAC-style search to fit rotated parabolas. 
 \url{https://math.stackexchange.com/questions/426150} for detailed ellipse parametric equations. 
 \url{ https://math.stackexchange.com/questions/2800817} for "focus/directrix/eccentricity" information
-\url{https://people.cas.uab.edu/~mosya/cl} and the folks referred to there,
+\url{https://people.cas.uab.edu/~mosya/cl/} and the folks referred to there,
 for fitConicLMA .
 \url{https://en.wikipedia.org/wiki/Ellipse} for several parameter conversion formulas
 

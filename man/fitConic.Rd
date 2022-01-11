@@ -10,7 +10,7 @@ This function fits data to an ellipse, hyperbola, or parabola.
 }
 \usage{
 fitConic(X, Y = NULL, parInit = NULL, conicType = c("e", "h", "p"),
- LambdaIni = 1, epsilonP = 1e-06, epsilonF = 1e-06, IterMAX = 20000)
+weights = NULL, LambdaIni = 1, epsilonP = 1e-06, epsilonF = 1e-06, IterMAX = 20000)
 }
 \arguments{
   \item{X}{ vector of x-values, or a Nx2 array of x and y values.
@@ -29,6 +29,9 @@ Optional. A vector either of six values representing an initial guess
 If \code{parInit} is either NULL or the "hvab,theta" option,
  \code{conicType} is required. Enter either "e", "h", or "p" for
   fitting to ellipse, hyperbola, or parabola. 
+}
+\item{weights}{
+Optional vector of weights to apply to data. Must be same length as the input data. Only non-negative integer weights are allowed. See the Details section. 
 }
   \item{LambdaIni}{
 A control parameter used in the fitting algorithm. Typically
@@ -56,7 +59,7 @@ In most cases, the bootstrapper tools work well enough to allow the main algorit
 The algorithm branch which fits data to parabolas does not use or need
  initialization, as it uses a RANSAC-type search to find 
  the best rotation angle, and then does a simple quadratic polynomial fit. 
-
+The \code{weights} input is restricted to nonnegative integers at this time. Doubles are rounded and negative values are set to zero. A zero weight will remove the matching data value from the dataset. 
 }
 \value{
 
